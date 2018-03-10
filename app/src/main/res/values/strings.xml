@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hollywood Movies</string>
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-5152778234781012/2838532865</string>
+    <string name="interstitial_full_screen">ca-app-pub-5152778234781012/9516934933</string>
+
+</resources>
