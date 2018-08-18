@@ -1,7 +1,5 @@
 package MovieDataPump;
 
-import android.test.suitebuilder.annotation.Smoke;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
