@@ -81,7 +81,7 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
                 break;
             case 0:
                 expandableListDetail = ExListData2016_Future.getData();
-                setTitle("Hollywood Movies (2016 - 2018)");
+                setTitle("Hollywood Movies (2016 - Future)");
                 break;
 
         }
