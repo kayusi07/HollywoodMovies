@@ -36,7 +36,6 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
     ExpandableListAdapter expandableListAdapter;
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
-    InterstitialAd interstitialAd;
     private AdView mAdView;
 
     @Override
@@ -128,27 +127,6 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
 
 
 
-    private InterstitialAd createNewIntAd() {
-        InterstitialAd intAd = new InterstitialAd(this);
-        // set the adUnitId (defined in values/strings.xml)
-        intAd.setAdUnitId(getString(R.string.interstitial_full_screen));
-        intAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                }
-            }
-        });
-        return intAd;
-    }
-
-    private void loadIntAdd() {
-        // Disable the  level two button and load the ad.
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        interstitialAd.loadAd(adRequest);
-    }
 
     @Override
     public void onPause() {
@@ -181,10 +159,6 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
 
     @Override
     public void networkAvailable() {
-
-        interstitialAd = createNewIntAd();
-        loadIntAdd();
-
         mAdView.setVisibility(View.VISIBLE);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
