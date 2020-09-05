@@ -16,7 +16,7 @@ public class CustomGridAdapter extends BaseAdapter {
     Context context;
     int logos[];
     LayoutInflater inflter;
-    String year[] = {"2016 - 2020", "2011 - 2015",  "2006 - 2010", "2001 - 2005", "1996 - 2000", "1990 - 1995"};
+    String year[] = {"2016 - 2020", "2011 - 2015",  "2006 - 2010", "2001 - 2005", "1996 - 2000", "1990 - 1995", "Upcoming in 2021"};
 
     public CustomGridAdapter(Context applicationContext, int[] logos) {
         this.context = applicationContext;

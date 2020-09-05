@@ -3,10 +3,11 @@ package hollywood.kayushi07.com.hollywoodmovies;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements NetworkStateRecei
     /* ... */
     private NetworkStateReceiver networkStateReceiver;
     GridView simpleGrid;
-    int logos[] = {R.drawable.f_2017, R.drawable.f_2011, R.drawable.f_2006, R.drawable.f_2001, R.drawable.f_1996, R.drawable.f_1990};
+    int logos[] = {R.drawable.f_2017, R.drawable.f_2011, R.drawable.f_2006, R.drawable.f_2001, R.drawable.f_1996, R.drawable.f_1990, R.drawable.f_2017};
     private AdView mAdView;
     InterstitialAd interstitialAd;
 

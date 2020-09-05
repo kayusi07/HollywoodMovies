@@ -3,16 +3,15 @@ package hollywood.kayushi07.com.hollywoodmovies;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +22,8 @@ import MovieDataPump.ExListData1996_2000;
 import MovieDataPump.ExListData2001_2005;
 import MovieDataPump.ExListData2006_2010;
 import MovieDataPump.ExListData2011_2015;
-import MovieDataPump.ExListData2016_Future;
+import MovieDataPump.ExListData2016_2020;
+import MovieDataPump.ExListData2021;
 
 /**
  * Created by Ayushi on 19-12-2017.
@@ -58,6 +58,10 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
 
         switch (position){
+            case 6:
+                expandableListDetail = ExListData2021.getData();
+                setTitle("Upcoming Movies 2021");
+                break;
             case 5:
                 expandableListDetail = ExListData1990_1995.getData();
                 setTitle("Hollywood Movies (1990 - 1995)");
@@ -79,7 +83,7 @@ public class MovieListActivity extends AppCompatActivity implements NetworkState
                 setTitle("Hollywood Movies (2011 - 2015)");
                 break;
             case 0:
-                expandableListDetail = ExListData2016_Future.getData();
+                expandableListDetail = ExListData2016_2020.getData();
                 setTitle("Hollywood Movies (2016 - 2020)");
                 break;
 
